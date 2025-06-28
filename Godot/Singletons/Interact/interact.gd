@@ -36,7 +36,7 @@ func get_mouse_world_pos():
 	params.from = start
 	params.to = end
 	#params.set_collision_mask_value(2, true) # layer 2 is for interactables
-	params.collision_mask = 5
+	params.collision_mask = 4
 	
 	var result : Dictionary = space.intersect_ray(params)
 	if result.is_empty() == false:

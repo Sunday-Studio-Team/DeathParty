@@ -330,7 +330,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02552, 0, -1)
 
 [node name="NPC" type="StaticBody3D" parent="Room/ThingsToHide"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
-collision_layer = 9
+collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_ryguw")
 dialogue_box = ExtResource("5_0odxb")
