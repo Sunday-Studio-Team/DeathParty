@@ -102,21 +102,21 @@ func compress_vector3(vec: Vector3) -> float:
 
 
 ## Functions for emitting GlobalCameraScript signals
-func _remove_all_bounds(body: Node3D) -> void:
+func remove_all_bounds(body: Node3D) -> void:
 	GlobalCameraScript.remove_camera_bounds_LR.emit()
 	GlobalCameraScript.remove_camera_bounds_y.emit()
 	GlobalCameraScript.remove_camera_bounds_depth.emit()
 	GlobalCameraScript.remove_camera_bounds_path.emit()
 
-func _bind_camera_LR(body: Node3D) -> void:
+func bind_camera_LR(body: Node3D) -> void:
 	GlobalCameraScript.bind_camera_LR.emit(left_bound, right_bound, basis)
 
 
-func _bind_camera_y(body: Node3D) -> void:
+func bind_camera_y(body: Node3D) -> void:
 	GlobalCameraScript.bind_camera_y.emit(lower_bound, upper_bound)
 
 
-func _bind_camera_depth(body: Node3D) -> void:
+func bind_camera_depth(body: Node3D) -> void:
 	GlobalCameraScript.bind_camera_depth.emit(inner_bound, outer_bound, basis)
 
 
@@ -125,15 +125,15 @@ func _bind_camera_path(body: Node3D) -> void:
 	GlobalCameraScript.bind_camera_path.emit(path_follow_node)
 
 
-func _keep_camera_on_player(body: Node3D) -> void:
+func keep_camera_on_player(body: Node3D) -> void:
 	GlobalCameraScript.camera_on_player.emit(true)
 
 
-func _keep_camera_off_player(body: Node3D) -> void:
+func keep_camera_off_player(body: Node3D) -> void:
 	GlobalCameraScript.camera_on_player.emit(false)
 
 
-func _move_player_to_foreground(body: Node3D) -> void:
+func move_player_to_foreground(body: Node3D) -> void:
 	body.global_position = move_to_foreground(body)
 
 ## These functions should be defined in the extended script

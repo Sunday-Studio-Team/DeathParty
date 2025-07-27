@@ -5,23 +5,15 @@ extends "res://Utilities/scripts/define_camera_bounds.gd"
 func _ready() -> void:
 	super()
 	GlobalPlayerScript.player_moved.connect(_change_visibility)
+	body_entered.connect(_handle_player_entrance)
 
-
-func _on_body_entered(body: Node3D) -> void:
-	GlobalCameraScript.remove_all_bounds()
-	GlobalCameraScript.camera_on_player.emit(true)
-	# Define camera bounds 
-	GlobalCameraScript.bind_camera_LR.emit(left_bound, right_bound, basis)
-	GlobalCameraScript.bind_camera_y.emit(lower_bound, upper_bound)
-	GlobalCameraScript.bind_camera_depth.emit(inner_bound, outer_bound, basis)
+func _handle_player_entrance(body: Node3D) -> void:
+	remove_all_bounds(body)
+	keep_camera_on_player(body)
 	rotate_player(body)
-	
+	bind_camera_LR(body)
+	bind_camera_y(body)
 	FmodServer.set_global_parameter_by_name_with_label("room", "front room")
-	print(room_area_center)
-	print(camera_y_offset)
-	print(lower_bound)
-	print(upper_bound)
-
 
 func _change_visibility(pos: Vector3) -> void:
 	if(background_plane.distance_to(pos) < 0):
