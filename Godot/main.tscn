@@ -261,7 +261,7 @@ object_viewer = NodePath("../../../../ObjectViewer")
 visible = false
 test_path = "res://Assets/models/bookflip3.tscn"
 
-[node name="SubViewport" parent="ObjectViewer/SubViewportContainer" index="0"]
+[node name="SubViewport" parent="ObjectViewer/MarginContainer/SubViewportContainer" index="0"]
 render_target_update_mode = 0
 
 [node name="WorldBoundary" type="Area3D" parent="."]
