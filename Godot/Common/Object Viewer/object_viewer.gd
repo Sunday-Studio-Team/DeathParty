@@ -1,4 +1,4 @@
-class_name ObjectViewer extends Control
+class_name ObjectViewer extends CanvasLayer
 
 #The item that will be viewed by the object viewer
 @export var active_item : Node3D
@@ -10,9 +10,9 @@ var pressed : bool = false
 #Moves the item and camara offscreen by pushing it by a large offset
 @export var hide_offset : int = -1000
 
-@onready var sub_viewport : SubViewport = $SubViewportContainer/SubViewport
-@onready var model_holder : Node3D =  $"SubViewportContainer/SubViewport/Model Holder"
-@onready var camera_3d : Camera3D = $SubViewportContainer/SubViewport/Camera3D
+@onready var sub_viewport: SubViewport = %SubViewport
+@onready var model_holder: Node3D = %"Model Holder"
+@onready var camera_3d: Camera3D = %Camera3D
 
 # NOTE: the lines in this script that reference 'light' are commented out
 # to avoid crashes (since the directional light in the object viewer
@@ -21,10 +21,10 @@ var pressed : bool = false
 #@onready var light : DirectionalLight3D = $SubViewportContainer/SubViewport/Light
 
 #Custom background
-@onready var color_rect : ColorRect = $ColorRect
-@onready var blur : Panel = $Blur
-@onready var custom_background_container : Control = $CustomBackground
-@onready var item_info : ItemInfoContainer = $ItemInfo
+@onready var color_rect : ColorRect = %ColorRect
+@onready var blur : Panel = %Blur
+@onready var custom_background_container : Control = %CustomBackground
+@onready var item_info : ItemInfoContainer = %ItemInfo
 
 var light_up_shader : ShaderMaterial = preload("res://Assets/Shaders/LightUpShader.tres")
 

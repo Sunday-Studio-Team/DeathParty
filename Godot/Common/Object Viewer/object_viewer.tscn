@@ -34,76 +34,60 @@ shader_parameter/darken_amount = 0.18
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o7dqn"]
 
-[node name="ObjectViewer" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ObjectViewer" type="CanvasLayer"]
 script = ExtResource("1_o3r5r")
 test_path = "res://Common/InventoryUI/Example Items/Cube.tscn"
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
+[node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 mouse_filter = 2
 color = Color(0.223103, 0.223103, 0.223103, 0.717647)
 
-[node name="Blur" type="Panel" parent="."]
+[node name="Blur" type="Panel" parent="MarginContainer"]
+unique_name_in_owner = true
 modulate = Color(0.162066, 0.162066, 0.162066, 1)
 self_modulate = Color(0.776471, 0.776471, 0.776471, 1)
 material = SubResource("ShaderMaterial_2cfm7")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 2
 mouse_filter = 2
 
-[node name="CustomBackground" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="CustomBackground" type="Control" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 mouse_filter = 2
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer"]
+layout_mode = 2
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/SubViewportContainer"]
+unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1152, 612)
 render_target_update_mode = 4
 
-[node name="Model Holder" type="Node3D" parent="SubViewportContainer/SubViewport"]
+[node name="Model Holder" type="Node3D" parent="MarginContainer/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+[node name="Camera3D" type="Camera3D" parent="MarginContainer/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.115, 2.126)
+current = true
 
-[node name="ItemInfo" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ItemInfo" type="Control" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 script = ExtResource("2_o7dqn")
 
-[node name="TextureRect" type="ColorRect" parent="ItemInfo"]
+[node name="TextureRect" type="ColorRect" parent="MarginContainer/ItemInfo"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03
@@ -114,7 +98,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.168627, 0.168627, 0.168627, 0.756863)
 
-[node name="Button" type="Button" parent="ItemInfo/TextureRect"]
+[node name="Button" type="Button" parent="MarginContainer/ItemInfo/TextureRect"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -126,7 +110,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_o7dqn")
 text = "Back"
 flat = true
 
-[node name="DescriptionBacker" type="ColorRect" parent="ItemInfo" node_paths=PackedStringArray("label")]
+[node name="DescriptionBacker" type="ColorRect" parent="MarginContainer/ItemInfo" node_paths=PackedStringArray("label")]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6
@@ -139,7 +123,7 @@ label = NodePath("Description")
 resize_x = false
 padding_bottom = 10.0
 
-[node name="Description" type="RichTextLabel" parent="ItemInfo/DescriptionBacker"]
+[node name="Description" type="RichTextLabel" parent="MarginContainer/ItemInfo/DescriptionBacker"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03
