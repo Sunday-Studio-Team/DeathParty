@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dph5ihe40llhe" path="res://rooms/Exterior Frat Lawn/Exterior.tscn" id="27_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://bqae87n6emy8q" path="res://rooms/Hourhand hallway/Hourhand hallway.tscn" id="27_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://bpjb4k8tcm014" path="res://rooms/control room/Controlroom.tscn" id="28_kq58d"]
-[ext_resource type="Script" path="res://cell_visualizer.gd" id="28_qsp4k"]
+[ext_resource type="Script" uid="uid://kp3w3bjsanur" path="res://cell_visualizer.gd" id="28_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://c7033b4susyvc" path="res://rooms/Storage Room/Storageroom.tscn" id="28_xuqvo"]
 [ext_resource type="PackedScene" uid="uid://ch4fuk8qiva6x" path="res://rooms/Ghost hallway/Ghost hallway.tscn" id="29_qsp4k"]
 [ext_resource type="PackedScene" uid="uid://b8jbowdnorp1f" path="res://Utilities/pause_menu/pause_menu.tscn" id="37_h8e4i"]
@@ -99,9 +99,8 @@ script = ExtResource("65_uatky")
 viewfinder_camera = NodePath("Camera2D")
 Picture = NodePath("body/MainImage")
 
-[node name="shoot" parent="PolaroidCamera/body/ViewFinder/filter_control" index="6" node_paths=PackedStringArray("scene")]
+[node name="shoot" parent="PolaroidCamera/body/ViewFinder/filter_control" index="6"]
 script = ExtResource("12_kq58d")
-scene = NodePath("../../..")
 
 [node name="Polaroid" parent="." instance=ExtResource("57_vke2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -24.2135, 0)
@@ -146,7 +145,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.423, 4.7584, -20.5061)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.668, 2.34912, -17.0223)
 
 [node name="Basement" parent="." groups=["loadable_scene"] instance=ExtResource("38_b1qrp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61912, -3.28439, 7.73886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6294625, -3.2843897, 7.7436066)
 
 [node name="Bedroom" parent="." instance=ExtResource("39_h8e4i")]
 transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -39.796, 0.0111146, 22.715)

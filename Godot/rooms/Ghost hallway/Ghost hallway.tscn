@@ -1,4 +1,4 @@
-[gd_scene load_steps=169 format=4 uid="uid://ch4fuk8qiva6x"]
+[gd_scene load_steps=171 format=4 uid="uid://ch4fuk8qiva6x"]
 
 [ext_resource type="Texture2D" uid="uid://bcg3mnugm862f" path="res://rooms/Ghost hallway/ghost hallway_wooddark.png" id="2_p1n0h"]
 [ext_resource type="Script" uid="uid://bwumtfq5s3fh3" path="res://rooms/Ghost hallway/ghost_hallway.gd" id="2_rj2l7"]
@@ -63,6 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://dcyx6nxctxmpd" path="res://rooms/Ghost hallway/fire/fire-11.png" id="59_65wwx"]
 [ext_resource type="Texture2D" uid="uid://bp4plqqk6pcdx" path="res://rooms/Ghost hallway/fire/fire-12.png" id="60_5rqn6"]
 [ext_resource type="PackedScene" uid="uid://i7gdcbnkh0w4" path="res://rooms/Ghost hallway/blue_sky.tscn" id="61_u8eoh"]
+[ext_resource type="Material" uid="uid://coyo0xu1lvjq2" path="res://rooms/Ghost hallway/floor wood2.tres" id="65_o3d6w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dxaoo"]
 size = Vector3(13.7318, 4.49936, 7.14718)
@@ -1605,6 +1606,8 @@ shadow_mesh = SubResource("ArrayMesh_cwahg")
 [sub_resource type="BoxShape3D" id="BoxShape3D_p1n0h"]
 size = Vector3(5.52692, 0.130005, 2.42374)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_urdp6"]
+
 [node name="Ghost hallway" type="Area3D" node_paths=PackedStringArray("room_area") groups=["loadable_scene"]]
 collision_mask = 2
 script = ExtResource("2_rj2l7")
@@ -2157,7 +2160,8 @@ mesh = SubResource("ArrayMesh_2coxh")
 skeleton = NodePath("")
 
 [node name="Woodfloor" type="MeshInstance3D" parent="RoomAndFloor"]
-transform = Transform3D(0, 0, -5.70488, 0, 0.857832, 0, 1.05168, 0, 0, -1.70241, -1.18371, 5.32539)
+transform = Transform3D(0, 0, -5.7048807, 0, 0.857832, 0, 1.05168, 0, 0, -1.7035171, -1.1837101, 5.348628)
+visible = false
 mesh = SubResource("ArrayMesh_6kxje")
 skeleton = NodePath("")
 
@@ -2167,6 +2171,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43983, 0, 2.62053)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomAndFloor/floor"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 1.24676, -1.34622, -1.11348)
 shape = SubResource("BoxShape3D_p1n0h")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RoomAndFloor"]
+transform = Transform3D(-2.7772882e-07, 0, 6.4185877, 0, 1, 0, -6.353695, 0, -2.805654e-07, -1.0249592, -1.1714329, 4.793826)
+mesh = SubResource("PlaneMesh_urdp6")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("65_o3d6w")
 
 [editable path="Props/Misc/blue sky"]
 [editable path="Props/Misc/spiderwebs"]

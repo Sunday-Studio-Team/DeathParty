@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://coyo0xu1lvjq2"]
+
+[ext_resource type="Texture2D" uid="uid://6mx4m2eis7hy" path="res://rooms/Ghost hallway/ghost hallway_wood panel big.png" id="1_vv4nw"]
+
+[resource]
+resource_name = "Material.022"
+render_priority = -1
+albedo_texture = ExtResource("1_vv4nw")
+uv1_scale = Vector3(3.17, 3.17, 3.17)

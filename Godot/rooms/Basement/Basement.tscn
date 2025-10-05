@@ -75,7 +75,7 @@
 [ext_resource type="PackedScene" uid="uid://s3crydfiatmy" path="res://Assets/CharacterAssets/cone_ghost/cone_ghost.tscn" id="83_ij3m0"]
 [ext_resource type="PackedScene" uid="uid://bagpax3yb0uf7" path="res://Assets/CharacterAssets/christmas_tree/christmas_tree.tscn" id="84_reyxf"]
 [ext_resource type="PackedScene" uid="uid://cfen8ypgv1gjf" path="res://Assets/CharacterAssets/gamers/shark_gamer/shark_gamer.tscn" id="85_vdfwq"]
-[ext_resource type="PackedScene" uid="uid://bhn4nq3dwy343" path="res://Assets/CharacterAssets/frat_boys/red_hat_frat_boy/frat_boy_red_hat.tscn" id="88_2nnqp"]
+[ext_resource type="PackedScene" uid="uid://cd3gxo5pookxd" path="res://Assets/CharacterAssets/frat_boys/red_hat_frat_boy/frat_boy_red_hat.tscn" id="88_2nnqp"]
 [ext_resource type="PackedScene" uid="uid://c8dmqdvlt6p8x" path="res://Assets/CharacterAssets/frat_boys/Long_Hair_frat_boy/frat_boy_long_hair.tscn" id="89_2nnqp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xu4va"]
@@ -1613,12 +1613,12 @@ draw_pass_1 = SubResource("SphereMesh_j7vhh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00919437, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/Floor"]
-transform = Transform3D(-0.155, -2.34043e-08, 0.000119794, 2.34044e-08, -0.155, 0, 0.000119794, 1.80884e-11, 0.155, 1.68477, -0.0854081, -1.51532)
+transform = Transform3D(-0.155, -2.34043e-08, 0.000119794, 2.34044e-08, -0.155, 0, 0.000119794, 1.80884e-11, 0.155, 1.68477, -0.08540809, -1.2884218)
 mesh = SubResource("ArrayMesh_g5x68")
 skeleton = NodePath("")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Room/Floor"]
-transform = Transform3D(-0.155, 0, -0.000119794, 0, -0.155, 0, 0.000119794, 0, -0.155, 1.689, -0.0857837, 4.348)
+transform = Transform3D(-0.155, 0, -0.000119794, 0, -0.155, 0, 0.000119794, 0, -0.155, 1.689, -0.08578369, 4.5939617)
 mesh = SubResource("ArrayMesh_g5x68")
 skeleton = NodePath("")
 

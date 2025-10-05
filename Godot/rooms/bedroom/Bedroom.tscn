@@ -191,7 +191,7 @@ resource_name = "Material.224"
 cull_mode = 2
 albedo_texture = ExtResource("1_aasoq")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_05wcp"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_wkd24"]
 _surfaces = [{
 "aabb": AABB(-3.35651, 0, -2.68261, 6.71302, 1e-05, 5.36521),
 "format": 34896613377,
@@ -221,7 +221,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///78AAP9/AAD/fwAA/38AAP9/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_05wcp")
+shadow_mesh = SubResource("ArrayMesh_wkd24")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfmkl"]
 resource_name = "Material.209"
@@ -2539,7 +2539,7 @@ transform = Transform3D(-4.79537e-08, 0, 0.805901, 0, 0.805901, 0, -1.09705, 0, 
 mesh = SubResource("ArrayMesh_vaxmu")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Room/Floor"]
-transform = Transform3D(-4.79537e-08, 0, 0.805901, 0, 0.805901, 0, -1.09705, 0, -3.52271e-08, 0, -0.112812, 8.80919)
+transform = Transform3D(-4.79537e-08, 0, 0.805901, 0, 0.805901, 0, -1.09705, 0, -3.52271e-08, 0, -0.112812, 8.793505)
 mesh = SubResource("ArrayMesh_vaxmu")
 
 [node name="LeftWall" type="Node3D" parent="Room"]
