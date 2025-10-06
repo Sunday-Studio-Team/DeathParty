@@ -18,15 +18,13 @@ var max_objects_per_frame : int = 10000
 var SPECIAL_CHILD_CLASSES : Array[Variant] = [
 	SceneLoader, 
 	TeleportPoint, 
-	NPC, 
-	InteractionDetector,
+	NPC
 ]
 
 var SPECIAL_CHILD_DATA_CLASSES : Array[Variant] = [
 	SceneLoaderData, 
 	TeleportPointData, 
-	NPCData, 
-	InteractionDetectorData,
+	NPCData
 ]
 
 func _init(_instance : Node3D, _parent_obj : GameObject = null) -> void:
