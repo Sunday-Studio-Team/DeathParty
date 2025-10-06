@@ -1,21 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbyg62wymptn6"]
+[gd_scene load_steps=5 format=3 uid="uid://bbyg62wymptn6"]
 
 [ext_resource type="Script" uid="uid://f5ke07o2mygi" path="res://Singletons/ContentLoader/scene_loader.gd" id="1_6wayg"]
 [ext_resource type="Texture2D" uid="uid://b6e4jlycbcxdv" path="res://Assets/pop_ups/EnterArrowLeft.png" id="2_xpaum"]
-[ext_resource type="Texture2D" uid="uid://6sxva7xhuvix" path="res://Assets/pop_ups/EnterArrowRight.png" id="3_0sak6"]
 [ext_resource type="PackedScene" uid="uid://3dt1w7lckdyq" path="res://Entities/interaction_detector.tscn" id="3_ur62n"]
-[ext_resource type="Texture2D" uid="uid://ccuxjk7edg5dg" path="res://Assets/pop_ups/EnterArrowDown.png" id="4_31qgr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ur62n"]
 resource_local_to_scene = true
 size = Vector3(1.61938, 2.80212, 2.04828)
 
-[node name="SceneLoader" type="Node3D"]
+[node name="SceneLoader" type="Area3D"]
 script = ExtResource("1_6wayg")
-left_arrow_asset = ExtResource("2_xpaum")
-right_arrow_asset = ExtResource("3_0sak6")
-down_arrow_asset = ExtResource("4_31qgr")
-use_first_mesh = false
+metadata/_custom_type_script = "uid://f5ke07o2mygi"
 
 [node name="DoorSound" type="FmodEventEmitter3D" parent="."]
 event_name = "event:/000_SFX/100_Environment/door"

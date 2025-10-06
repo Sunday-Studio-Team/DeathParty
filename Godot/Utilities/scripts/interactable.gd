@@ -1,4 +1,4 @@
-class_name Interactable extends Node3D
+class_name Interactable extends Area3D
 
 @export var primary_mesh: MeshInstance3D
 @export var use_first_mesh: bool = true
