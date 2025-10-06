@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ce647ee5srh8k"]
+[gd_scene load_steps=4 format=3 uid="uid://ce647ee5srh8k"]
 
 [ext_resource type="PackedScene" uid="uid://qhxefncatca4" path="res://Entities/NPCs/npc.tscn" id="1_32tcq"]
 [ext_resource type="PackedScene" uid="uid://c6cexkldpdgpq" path="res://Assets/CharacterAssets/alberto_ma/alberto_ma_model.tscn" id="1_x14h6"]
+[ext_resource type="Resource" uid="uid://csgkjerirp602" path="res://Singletons/SaveSystem/DefaultResources/CharacterResources/character_properties_albertoma.tres" id="2_5jxso"]
 
 [node name="AlbertoMa" instance=ExtResource("1_32tcq")]
+character_resource = ExtResource("2_5jxso")
 
 [node name="Model" parent="CharacterBody3D" index="1" instance=ExtResource("1_x14h6")]
 transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 0, 0, 0)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://ddiqilmdbakfb"]
+[gd_scene load_steps=9 format=4 uid="uid://ddiqilmdbakfb"]
 
 [ext_resource type="PackedScene" uid="uid://qhxefncatca4" path="res://Entities/NPCs/npc.tscn" id="1_rvtv3"]
+[ext_resource type="Resource" uid="uid://dt8bxog1pac6f" path="res://Singletons/SaveSystem/DefaultResources/CharacterResources/character_properties_angel.tres" id="3_emiji"]
 [ext_resource type="Texture2D" uid="uid://c5jeli6332txx" path="res://Assets/CharacterAssets/angel/angel_ANGLE.png" id="4_1r22b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdud6"]
@@ -610,6 +611,7 @@ _data = {
 }
 
 [node name="Angel" instance=ExtResource("1_rvtv3")]
+character_resource = ExtResource("3_emiji")
 
 [node name="Model" type="Node3D" parent="CharacterBody3D" index="1"]
 
