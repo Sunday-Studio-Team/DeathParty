@@ -1,25 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://ce647ee5srh8k"]
+[gd_scene load_steps=3 format=3 uid="uid://ce647ee5srh8k"]
 
-[ext_resource type="Script" uid="uid://d10fwvktnsx7m" path="res://Entities/EntityScripts/npc.gd" id="1_32tcq"]
+[ext_resource type="PackedScene" uid="uid://qhxefncatca4" path="res://Entities/NPCs/npc.tscn" id="1_32tcq"]
 [ext_resource type="PackedScene" uid="uid://c6cexkldpdgpq" path="res://Assets/CharacterAssets/alberto_ma/alberto_ma_model.tscn" id="1_x14h6"]
-[ext_resource type="Resource" uid="uid://csgkjerirp602" path="res://Singletons/SaveSystem/DefaultResources/CharacterResources/character_properties_albertoma.tres" id="2_5jxso"]
-[ext_resource type="PackedScene" uid="uid://bslr2tafqki5h" path="res://Common/Popup UI/npc_interact_popup.tscn" id="5_72jnx"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_32tcq"]
+[node name="AlbertoMa" instance=ExtResource("1_32tcq")]
 
-[node name="AlbertoMa" type="Node3D"]
-script = ExtResource("1_32tcq")
-character_resource = ExtResource("2_5jxso")
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-collision_layer = 4
-
-[node name="AlbertoMaModel" parent="CharacterBody3D" instance=ExtResource("1_x14h6")]
+[node name="Model" parent="CharacterBody3D" index="1" instance=ExtResource("1_x14h6")]
 transform = Transform3D(0.95, 0, 0, 0, 0.95, 0, 0, 0, 0.95, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_32tcq")
-
-[node name="Popup" parent="." instance=ExtResource("5_72jnx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 2, 0)
+[node name="Camera3D" type="Camera3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.603323, 0.9240408)
