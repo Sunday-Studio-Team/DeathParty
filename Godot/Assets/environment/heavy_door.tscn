@@ -103,7 +103,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ue2b0")
 
-[node name="Door" type="MeshInstance3D"]
+[node name="Door" type="Area3D"]
+script = ExtResource("4_vt3bu")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.184595, 0, -0.000142667, 0, 0.184595, 0, 0.000142667, 0, -0.184595, 0, 0, 0)
 mesh = SubResource("ArrayMesh_3286x")
 skeleton = NodePath("")

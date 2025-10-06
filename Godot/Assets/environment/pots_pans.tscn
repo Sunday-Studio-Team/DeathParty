@@ -10,9 +10,10 @@
 resource_local_to_scene = true
 size = Vector3(1.91424, 2.80212, 2.04828)
 
-[node name="PotsPans" type="Node3D"]
+[node name="PotsPans" type="Area3D"]
 script = ExtResource("1_6fr3i")
 talking_object_resource = ExtResource("2_055ua")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="Pan" parent="." instance=ExtResource("1_g0su7")]
 transform = Transform3D(0.0698927, 0, -0.676115, 0, 0.679718, 0, 0.676115, 0, 0.0698927, -4.52642, 2.04581, 5.18624)

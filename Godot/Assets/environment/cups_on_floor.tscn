@@ -10,10 +10,11 @@
 resource_local_to_scene = true
 size = Vector3(10.3141, 2.4091, 3.24205)
 
-[node name="CupsOnFloor" type="Node3D"]
+[node name="CupsOnFloor" type="Area3D"]
 transform = Transform3D(1.14018, 0, 0, 0, 1.14018, 0, 0, 0, 1.14018, 0, 0, 0)
 script = ExtResource("1_7qhes")
 talking_object_resource = ExtResource("2_prlkr")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="Cup" parent="." instance=ExtResource("1_doxhs")]
 transform = Transform3D(0.0106429, -0.22037, 0.0831477, 0.2355, 0.0113736, 0, -0.00401099, 0.083051, 0.220626, -3.01406, 1.31247, 5.1322)

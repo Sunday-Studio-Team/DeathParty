@@ -50,20 +50,24 @@ shadow_mesh = SubResource("ArrayMesh_dlg7w")
 resource_local_to_scene = true
 size = Vector3(11.9221, 9.38189, 14.6059)
 
-[node name="Fridge" type="MeshInstance3D"]
+[node name="Fridge" type="Area3D"]
+script = ExtResource("2_8nbdk")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.19374, 0.000337409, -0.19374, 1.96398e-14, 1.12771e-11, -1.12771e-11, -0.000337409, -0.19374, 0, 0, 0)
 mesh = SubResource("ArrayMesh_f57ir")
 skeleton = NodePath("")
 script = ExtResource("2_8nbdk")
 talking_object_resource = ExtResource("3_2walw")
 
-[node name="InteractionDetector" parent="." instance=ExtResource("4_o64ol")]
+[node name="InteractionDetector" parent="MeshInstance3D" instance=ExtResource("4_o64ol")]
 
-[node name="CollisionShape3D" parent="InteractionDetector" index="0"]
+[node name="CollisionShape3D" parent="MeshInstance3D/InteractionDetector" index="0"]
 transform = Transform3D(1, -3.44912e-18, -2.26902e-15, 6.84403e-19, 1, -4.98258e-08, 4.26742e-16, 4.98258e-08, 1, -0.0556803, -0.134338, -4.24666)
 shape = SubResource("BoxShape3D_1acxu")
 
-[node name="Popup" parent="." instance=ExtResource("5_1acxu")]
+[node name="Popup" parent="MeshInstance3D" instance=ExtResource("5_1acxu")]
 transform = Transform3D(5, -1.6263e-19, -1.94289e-16, 1.0842e-19, 5, -4.65661e-09, 1.94289e-16, 4.65661e-09, 5, -2.21581, 7.73864, -0.0134773)
 
-[editable path="InteractionDetector"]
+[editable path="MeshInstance3D/InteractionDetector"]

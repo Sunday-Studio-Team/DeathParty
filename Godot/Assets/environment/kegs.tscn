@@ -10,9 +10,10 @@
 resource_local_to_scene = true
 size = Vector3(3.3941, 2.80212, 3.45676)
 
-[node name="Kegs" type="Node3D"]
+[node name="Kegs" type="Area3D"]
 script = ExtResource("1_khbxt")
 talking_object_resource = ExtResource("2_y3qqj")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="InteractionDetector" parent="." instance=ExtResource("3_y3qqj")]
 

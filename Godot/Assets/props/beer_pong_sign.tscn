@@ -46,17 +46,20 @@ shadow_mesh = SubResource("ArrayMesh_7mlqy")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ik6mh"]
 size = Vector3(0.75, 1.25, 0.75)
 
-[node name="BeerPongSign" type="StaticBody3D"]
+[node name="BeerPongSign" type="Area3D"]
 script = ExtResource("1_ik6mh")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.925492, 0, 0, 0, -4.41309e-07, 0.925492, 0, -0.925492, -4.41309e-07, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gdv3l")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_ik6mh")
 
-[node name="Popup" parent="." instance=ExtResource("3_7fa1t")]
+[node name="Popup" parent="StaticBody3D" instance=ExtResource("3_7fa1t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20015, -1.20527)

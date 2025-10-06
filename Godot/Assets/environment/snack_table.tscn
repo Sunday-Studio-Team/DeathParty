@@ -1,8 +1,7 @@
-[gd_scene load_steps=49 format=4 uid="uid://c7k3r4wskxfl5"]
+[gd_scene load_steps=48 format=4 uid="uid://c7k3r4wskxfl5"]
 
 [ext_resource type="Texture2D" uid="uid://ces02gfhqk6pr" path="res://Assets/props/wooden_table/wood_table_woodlight1.png" id="1_2p1p5"]
 [ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="1_lwrhe"]
-[ext_resource type="Resource" uid="uid://qrw8t87enuce" path="res://Singletons/SaveSystem/DefaultResources/TalkingObjectResources/snack_table_properties.tres" id="2_5gth4"]
 [ext_resource type="Texture2D" uid="uid://wkw2kqig7gxp" path="res://rooms/Basement/snacks on table_lambert1_baseColor.png" id="2_clgem"]
 [ext_resource type="Texture2D" uid="uid://cfoww084b0oep" path="res://rooms/Basement/snacks on table_lambert1_metallicRoughness.png" id="3_lwrhe"]
 [ext_resource type="Texture2D" uid="uid://b5s8hl2ljqlhm" path="res://rooms/Basement/snacks on table_Image_0.png" id="4_5gth4"]
@@ -472,80 +471,82 @@ size = Vector3(2, 1, 1.5)
 resource_local_to_scene = true
 size = Vector3(2.76721, 2.80212, 2.80821)
 
-[node name="WoodTable" type="StaticBody3D"]
-transform = Transform3D(0.0737315, 0, -1.3645, 0, 1.36649, 0, 1.3645, 0, 0.0737315, 0, 0, 0)
+[node name="WoodTable" type="Area3D"]
 script = ExtResource("1_lwrhe")
-talking_object_resource = ExtResource("2_5gth4")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.0737315, 0, -1.3645, 0, 1.36649, 0, 1.3645, 0, 0.0737315, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(0.276972, 0, -1.30289, 0, 1.17239, 0, -1.36434, 0, -0.264497, 0, 0, 3.8147e-06)
 mesh = SubResource("ArrayMesh_0shtl")
 skeleton = NodePath("")
 
-[node name="Snacks" type="Node3D" parent="."]
+[node name="Snacks" type="Node3D" parent="StaticBody3D"]
 transform = Transform3D(0.731802, 0, 0, 0, 0.731802, 0, 0, 0, 0.731802, -0.0281231, 0.662037, 0.0730265)
 
-[node name="Sketchfab Model_012" type="MeshInstance3D" parent="Snacks"]
+[node name="Sketchfab Model_012" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(-0.135744, 0, -0.13553, 0, 0.191819, 0, -0.13553, 0, 0.135744, 0.592658, -0.0795608, 0.667348)
 mesh = SubResource("ArrayMesh_fw4q4")
 skeleton = NodePath("")
 
-[node name="Sketchfab Model_013" type="MeshInstance3D" parent="Snacks"]
+[node name="Sketchfab Model_013" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.0622486, 0, -0.181438, 0, 0.191819, 0, -0.181438, 0, -0.0622486, 0.716397, -0.0923138, 0.720749)
 mesh = SubResource("ArrayMesh_fw4q4")
 skeleton = NodePath("")
 
-[node name="Object_5_001" type="MeshInstance3D" parent="Snacks"]
+[node name="Object_5_001" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.0588933, -9.97748e-05, -0.0204836, 1.3792e-10, 0.0623532, -0.00030372, 0.0204839, 0.000286863, 0.0588926, -0.202612, 0.192444, 0.120288)
 mesh = SubResource("ArrayMesh_0kr6l")
 skeleton = NodePath("")
 
-[node name="Cylinder_002_0" type="MeshInstance3D" parent="Snacks"]
+[node name="Cylinder_002_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.264221, 9.31323e-10, 0, 0, -9.44928e-08, 0.264221, 9.31323e-10, -0.264221, -9.44928e-08, 0.581607, 0.0634261, -0.956332)
 mesh = SubResource("ArrayMesh_05ox1")
 skeleton = NodePath("")
 
-[node name="pizza_pizza1MAT_02_pizza1_0" type="MeshInstance3D" parent="Snacks"]
+[node name="pizza_pizza1MAT_02_pizza1_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.208345, 0, 0, 0, -7.45099e-08, 0.208345, 0, -0.208345, -7.45099e-08, -1.24307, -0.113697, -0.125711)
 mesh = SubResource("ArrayMesh_bvkrv")
 skeleton = NodePath("")
 
-[node name="pizza_pizza2MAT_02_pizza2_0" type="MeshInstance3D" parent="Snacks"]
+[node name="pizza_pizza2MAT_02_pizza2_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.361038, 3.72529e-09, -1.77636e-15, 0, -1.72156e-07, 0.361038, 3.72529e-09, -0.361038, -1.72156e-07, 0.374033, -0.109734, -0.257084)
 mesh = SubResource("ArrayMesh_ea0sw")
 skeleton = NodePath("")
 
-[node name="pizza_pizza4MAT_02_pizza4_0" type="MeshInstance3D" parent="Snacks"]
+[node name="pizza_pizza4MAT_02_pizza4_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.208345, 9.31323e-10, 0, 0, -7.45099e-08, 0.208345, 9.31323e-10, -0.208345, -7.45099e-08, -0.354586, -0.113697, 0.700601)
 mesh = SubResource("ArrayMesh_trdki")
 skeleton = NodePath("")
 
-[node name="box_closed_01_box_0" type="MeshInstance3D" parent="Snacks"]
+[node name="box_closed_01_box_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.882787, -0.469774, -2.08616e-07, 4.47035e-08, -3.57628e-07, 1, -0.469774, -0.882787, -3.57628e-07, 0.163389, -0.0200494, 0.790545)
 mesh = SubResource("ArrayMesh_naoun")
 skeleton = NodePath("")
 
-[node name="box_opened_02_box_0" type="MeshInstance3D" parent="Snacks"]
+[node name="box_opened_02_box_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(0.56128, 0.827626, 2.38419e-07, 0, -2.38419e-07, 1, 0.827626, -0.56128, -1.19209e-07, -0.370456, 0.0659841, -0.51625)
 mesh = SubResource("ArrayMesh_gaql3")
 skeleton = NodePath("")
 
-[node name="PumpkinWithBeers" parent="Snacks" instance=ExtResource("12_iwk4c")]
+[node name="PumpkinWithBeers" parent="StaticBody3D/Snacks" instance=ExtResource("12_iwk4c")]
 transform = Transform3D(-0.838328, 0, -0.545166, 0, 1, 0, 0.545166, 0, -0.838328, 0.304025, 0.155474, 0.33205)
 
-[node name="box_opened_03_box_0" type="MeshInstance3D" parent="Snacks"]
+[node name="box_opened_03_box_0" type="MeshInstance3D" parent="StaticBody3D/Snacks"]
 transform = Transform3D(-0.583207, 0.812324, 2.08616e-07, 8.9407e-08, -2.38419e-07, 1, 0.812324, 0.583207, 1.19209e-07, -0.00295353, 0.0500704, -0.937493)
 mesh = SubResource("ArrayMesh_ffulb")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 shape = SubResource("BoxShape3D_dttvy")
 
-[node name="InteractionDetector" parent="." instance=ExtResource("16_5gth4")]
+[node name="InteractionDetector" parent="StaticBody3D" instance=ExtResource("16_5gth4")]
 
-[node name="CollisionShape3D" parent="InteractionDetector" index="0"]
+[node name="CollisionShape3D" parent="StaticBody3D/InteractionDetector" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325311, 0.901062, 0.048683)
 shape = SubResource("BoxShape3D_q02m8")
 
-[editable path="InteractionDetector"]
+[editable path="StaticBody3D/InteractionDetector"]

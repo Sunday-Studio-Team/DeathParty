@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://u3tbjg3scroh"]
+[gd_scene load_steps=5 format=3 uid="uid://u3tbjg3scroh"]
 
-[ext_resource type="Script" uid="uid://de2asi0rdni8c" path="res://Entities/Interactable/rotation_object_viewer_interactable.gd" id="1_i4fcm"]
-[ext_resource type="Script" path="res://Entities/Interactable/drag_object_viewer_interactable.gd" id="2_epx5s"]
+[ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="1_i4fcm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_6e0nh"]
 
@@ -18,25 +17,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.69659)
 [node name="Light" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.69659)
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." groups=["object_viewer_interactable"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.697538)
+[node name="Interactable" type="Area3D" parent="."]
 script = ExtResource("1_i4fcm")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
-mesh = SubResource("BoxMesh_6e0nh")
-skeleton = NodePath("../..")
+[node name="StaticBody3D2" type="StaticBody3D" parent="Interactable" groups=["object_viewer_interactable"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.697538)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
-shape = SubResource("BoxShape3D_i4fcm")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="StaticBody3D2" groups=["object_viewer_interactable"]]
-transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0.597446, 0, -3.85581e-09)
-script = ExtResource("2_epx5s")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/StaticBody3D"]
-material_override = SubResource("StandardMaterial3D_epx5s")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactable/StaticBody3D2"]
 mesh = SubResource("BoxMesh_6e0nh")
 skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/StaticBody3D2"]
+shape = SubResource("BoxShape3D_i4fcm")
+
+[node name="Interactable" type="Area3D" parent="Interactable/StaticBody3D2"]
+script = ExtResource("1_i4fcm")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Interactable/StaticBody3D2/Interactable" groups=["object_viewer_interactable"]]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0.597446, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interactable/StaticBody3D2/Interactable/StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_epx5s")
+mesh = SubResource("BoxMesh_6e0nh")
+skeleton = NodePath("../../../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable/StaticBody3D2/Interactable/StaticBody3D"]
 shape = SubResource("BoxShape3D_i4fcm")

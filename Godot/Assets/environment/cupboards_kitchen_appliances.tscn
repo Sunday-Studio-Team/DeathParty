@@ -10,10 +10,11 @@
 resource_local_to_scene = true
 size = Vector3(6.82577, 4.01254, 1.82921)
 
-[node name="Cupboards" type="Node3D"]
+[node name="Cupboards" type="Area3D"]
 transform = Transform3D(1.14018, 0, 0, 0, 1.14018, 0, 0, 0, 1.14018, 0, 0, 0)
 script = ExtResource("1_mtxdq")
 talking_object_resource = ExtResource("2_58j7v")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="InteractionDetector" parent="." instance=ExtResource("3_58j7v")]
 

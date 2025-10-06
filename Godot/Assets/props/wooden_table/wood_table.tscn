@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://c088ha3843ea2"]
+[gd_scene load_steps=9 format=4 uid="uid://c088ha3843ea2"]
 
 [ext_resource type="Texture2D" uid="uid://4cbg4ql10r1d" path="res://Assets/props/wooden_table/wood table_Plastic_1.png" id="1_j1jvw"]
 [ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="1_js0ac"]
 [ext_resource type="Texture2D" uid="uid://bev6mk6334slq" path="res://Assets/props/wooden_table/wood table_Plastic_2.png" id="2_3bwsy"]
-[ext_resource type="Resource" uid="uid://qrw8t87enuce" path="res://Singletons/SaveSystem/DefaultResources/TalkingObjectResources/snack_table_properties.tres" id="2_by8k2"]
 [ext_resource type="Texture2D" uid="uid://chj8b7xjhfpsl" path="res://Assets/props/wooden_table/wood table_Plastic.png" id="3_js0ac"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j1jvw"]
+radius = 4.5
+height = 12.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4xuc7"]
 resource_name = "Plastic.001_8"
@@ -53,19 +56,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8dhcg")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j1jvw"]
-radius = 4.5
-height = 12.0
-
-[node name="Table" type="StaticBody3D"]
+[node name="Table" type="Area3D"]
 script = ExtResource("1_js0ac")
-talking_object_resource = ExtResource("2_by8k2")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-2.76093e-16, 0.762058, -0.647508, -1, -4.37114e-08, 0, 2.9944e-16, 0.647508, 0.762058, 0, 2.1, 0)
+shape = SubResource("CapsuleShape3D_j1jvw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.4751, 0, 5.11799, 0, 5.87983, 0, 5.35936, 0, 4.27355, 0, 0, 0)
 mesh = SubResource("ArrayMesh_dhysc")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-2.76093e-16, 0.762058, -0.647508, -1, -4.37114e-08, 0, 2.9944e-16, 0.647508, 0.762058, 0, 2.1, 0)
-shape = SubResource("CapsuleShape3D_j1jvw")

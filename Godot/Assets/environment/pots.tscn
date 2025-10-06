@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://doj2p1ypfieac" path="res://Assets/props/pot.tscn" id="1_xckol"]
 [ext_resource type="Resource" uid="uid://bsag7mrm78x04" path="res://Singletons/SaveSystem/DefaultResources/TalkingObjectResources/potspans_properties.tres" id="2_fqe8e"]
 
-[node name="Pots" type="Node3D"]
+[node name="Pots" type="Area3D"]
 script = ExtResource("1_ad3br")
 talking_object_resource = ExtResource("2_fqe8e")
+metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="Pot" parent="." instance=ExtResource("1_xckol")]
 transform = Transform3D(0.578032, 0, -0.357624, 0, 0.679718, 0, 0.357624, 0, 0.578032, -4.81958, 2.04959, 4.89271)
