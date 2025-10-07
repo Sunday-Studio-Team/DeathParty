@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://ck4xtxo7o2lj3"]
+[gd_scene load_steps=27 format=4 uid="uid://bqstl0bxjt5tc"]
 
 [ext_resource type="PackedScene" uid="uid://qhxefncatca4" path="res://Entities/NPCs/npc.tscn" id="1_f8r0k"]
 [ext_resource type="Resource" uid="uid://bjotw4lrnmjtx" path="res://Singletons/SaveSystem/DefaultResources/CharacterResources/character_properties_bartender.tres" id="3_kfods"]

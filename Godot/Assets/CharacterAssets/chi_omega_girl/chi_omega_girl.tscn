@@ -1547,10 +1547,10 @@ _data = {
 
 [node name="ChiOmegaGirl" instance=ExtResource("1_0j0nm")]
 
-[node name="Model" type="Node3D" parent="CharacterBody3D" index="1"]
+[node name="chi omega" type="Node3D" parent="CharacterBody3D" index="1"]
 transform = Transform3D(0.011, 0, 0, 0, -4.80825e-10, -0.011, 0, 0.011, -4.80825e-10, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="CharacterBody3D/Model" index="0"]
+[node name="Skeleton3D" type="Skeleton3D" parent="CharacterBody3D/chi omega" index="0"]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -4.3233234e-05, -5.6099772, -96.16684)
@@ -2007,7 +2007,7 @@ bones/64/position = Vector3(-7.301569e-07, 5.4896126, 1.1920929e-07)
 bones/64/rotation = Quaternion(-1.9732397e-08, 5.1484676e-08, -3.8242433e-08, 1)
 bones/64/scale = Vector3(0.99999994, 1, 1.0000001)
 
-[node name="chi omega_001" type="MeshInstance3D" parent="CharacterBody3D/Model/Skeleton3D" index="0"]
+[node name="chi omega_001" type="MeshInstance3D" parent="CharacterBody3D/chi omega/Skeleton3D" index="0"]
 mesh = SubResource("ArrayMesh_oofrp")
 skin = SubResource("Skin_ac71m")
 
