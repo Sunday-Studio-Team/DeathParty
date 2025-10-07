@@ -15,10 +15,7 @@ dialogue_box = ExtResource("3_n5nax")
 [node name="Popup" parent="." index="0" instance=ExtResource("2_hnw2t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15, 2, 0)
 
-[node name="InteractionArea" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
-[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="2"]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." index="1"]
 collision_layer = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" index="0"]
