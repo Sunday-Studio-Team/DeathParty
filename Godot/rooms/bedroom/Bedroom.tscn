@@ -2728,10 +2728,10 @@ transform = Transform3D(0.0134157, 4.00487e-05, 1.80865e-09, -1.80388e-09, -1.59
 transform = Transform3D(-7.02716e-09, 0, -0.0545654, 0, 0.253809, 0, 0.160763, 0, -2.38513e-09, 2.5886, -0.176737, -4.57489)
 
 [node name="Pc_cableMesh_Maps_0_001" parent="Closet" index="29"]
-transform = Transform3D(0.571761, 0, -0.00652635, 0, 0.571798, 0, 0.00652636, 0, 0.571761, 0.94975, -1.18466, 0.869304)
+transform = Transform3D(0.571761, 0, -0.0065263505, 0, 0.571798, 0, 0.00652636, 0, 0.571761, 0.94974995, -1.18466, 1.2439725)
 
 [node name="Conection_Maps_1" type="MeshInstance3D" parent="Closet"]
-transform = Transform3D(0.158576, 0, -0.00896881, 0, 0.253809, 0, 0.0264243, 0, 0.0538232, 0.241776, -0.176737, 1.29695)
+transform = Transform3D(0.18747091, 0, -0.020758417, 0, 0.253809, 0, 0.031239204, 0, 0.12457441, 0.24177599, -0.17673695, 1.6703374)
 mesh = SubResource("ArrayMesh_c5gah")
 skeleton = NodePath("")
 
@@ -2847,7 +2847,7 @@ skeleton = NodePath("")
 [node name="Props" type="Node3D" parent="."]
 
 [node name="Guitar" parent="Props" instance=ExtResource("27_e0ilc")]
-transform = Transform3D(0.889039, 0, 0, 0, 0.889039, 0, 0, 0, 0.889039, -1.78076, 0.43937, 4.26778)
+transform = Transform3D(0.889039, 0, 0, 0, 0.889039, 0, 0, 0, 0.889039, -1.7390423, 0.43937, 3.9646435)
 
 [node name="WallDecorations" type="Node3D" parent="Props"]
 transform = Transform3D(1.01561, 0, 0, 0, 1.01561, 0, 0, 0, 1.01561, 1.4671, 1.56823, -0.635197)
@@ -2973,12 +2973,12 @@ mesh = SubResource("ArrayMesh_68lsw")
 skeleton = NodePath("")
 
 [node name="Poster5" type="MeshInstance3D" parent="Props/WallDecorations"]
-transform = Transform3D(1.21092, -3.29877e-08, -0.09224, -0.09224, -4.33061e-07, -1.21092, 0, 1.21443, -4.34315e-07, -2.90897, -1.13376, 4.35698)
+transform = Transform3D(1.21092, -3.29877e-08, -0.09223998, -0.09223998, -4.33061e-07, -1.21092, 0, 1.21443, -4.34315e-07, -2.9226692, -0.80248237, 4.35698)
 mesh = SubResource("ArrayMesh_avely")
 skeleton = NodePath("")
 
 [node name="Poster6" type="MeshInstance3D" parent="Props/WallDecorations"]
-transform = Transform3D(1.19401, 7.93191e-08, 0.221792, 0.221792, -4.2701e-07, -1.19401, 0, 1.21443, -4.34315e-07, -2.76665, -0.971136, 4.35698)
+transform = Transform3D(1.19401, 7.93191e-08, 0.221792, 0.221792, -4.2701e-07, -1.19401, 0, 1.21443, -4.34315e-07, -2.780349, -0.6398584, 4.35698)
 mesh = SubResource("ArrayMesh_msydh")
 skeleton = NodePath("")
 
@@ -2988,7 +2988,7 @@ mesh = SubResource("ArrayMesh_23liv")
 skeleton = NodePath("")
 
 [node name="Poster8" type="MeshInstance3D" parent="Props/WallDecorations"]
-transform = Transform3D(1.20298, -5.9499e-08, -0.166371, -0.166371, -4.3022e-07, -1.20298, 0, 1.21443, -4.34315e-07, -2.9192, -0.880332, 4.35698)
+transform = Transform3D(1.2029796, -5.9499e-08, -0.166371, -0.166371, -4.3022e-07, -1.2029796, 0, 1.21443, -4.34315e-07, -2.9246602, -0.54786485, 4.35698)
 mesh = SubResource("ArrayMesh_v5tcb")
 skeleton = NodePath("")
 

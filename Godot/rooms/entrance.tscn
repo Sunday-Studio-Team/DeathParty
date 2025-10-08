@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=4 uid="uid://d3uev5wxhcoe1"]
+[gd_scene load_steps=111 format=4 uid="uid://d3uev5wxhcoe1"]
 
 [ext_resource type="Script" uid="uid://b8ij6ghpwhgox" path="res://rooms/entrance.gd" id="1_3k57g"]
 [ext_resource type="Texture2D" uid="uid://cn8ag1br2becc" path="res://Assets/textures/entrance_room_environment/entrance room layout_big floor.png" id="3_ekhf5"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://bagpax3yb0uf7" path="res://Assets/CharacterAssets/christmas_tree/christmas_tree.tscn" id="47_yqsuh"]
 [ext_resource type="PackedScene" uid="uid://b5sjjc5i61576" path="res://Singletons/ContentLoader/TeleportPoint.tscn" id="49_a6eg1"]
 [ext_resource type="PackedScene" uid="uid://csh7q4aonjs3d" path="res://Assets/CharacterAssets/frat_boys/red_hat_frat_boy/Frat boy red hat.glb" id="49_cygoc"]
+[ext_resource type="PackedScene" uid="uid://cnb05rd1rv7e7" path="res://Assets/CharacterAssets/rowan/rowan.tscn" id="51_1e4ar"]
 [ext_resource type="Texture2D" uid="uid://dut3t6ajv8wp" path="res://Assets/textures/entrance_room_environment/two doors_IMG_4472.png" id="51_f4d3f"]
 [ext_resource type="PackedScene" uid="uid://bte4agxfg1yhm" path="res://Assets/CharacterAssets/frat_boys/Long_Hair_frat_boy/Frat boy long hair.glb" id="51_t3a1b"]
 [ext_resource type="PackedScene" uid="uid://cbtntid77jgm0" path="res://Assets/environment/red_carpet.tscn" id="53_t3a1b"]
@@ -1795,6 +1796,67 @@ bones/64/position = Vector3(3.40518e-07, 7.30069, -1.31951e-06)
 [node name="AnimationPlayer" parent="NPCs/Frat boy long hair2" index="1"]
 autoplay = "argue a bit"
 
+[node name="Rowan" parent="NPCs" instance=ExtResource("51_1e4ar")]
+transform = Transform3D(0.97848374, 0, 0.20632373, 0, 1, 0, -0.20632373, 0, 0.97848374, 1.9729848, 0.0006573424, 9.15299)
+
+[node name="Skeleton3D" parent="NPCs/Rowan/model" index="0"]
+bones/0/position = Vector3(-0.019693136, 0.057994224, -3.4986258)
+bones/0/rotation = Quaternion(-0.726212, 0.035858378, 0.039158523, 0.6854173)
+bones/1/rotation = Quaternion(-0.08706069, 0.008635582, -0.056966003, 0.9945355)
+bones/2/rotation = Quaternion(0.017591147, 0.005151367, -0.01811827, 0.9996678)
+bones/3/rotation = Quaternion(0.017805396, 0.006201871, -0.017596845, 0.9996674)
+bones/4/rotation = Quaternion(0.10239896, -0.00031145243, 0.0412228, 0.9938889)
+bones/5/rotation = Quaternion(-0.10456225, 0.014414716, -0.0070079924, 0.9943892)
+bones/7/rotation = Quaternion(-0.60703003, -0.37857506, 0.5827364, -0.3855045)
+bones/8/rotation = Quaternion(0.30948415, 0.15827718, 0.0074834134, 0.9376097)
+bones/9/rotation = Quaternion(0.005830981, -0.07947367, 0.2486255, 0.9653162)
+bones/10/rotation = Quaternion(0.015015196, 0.15169217, 0.011694124, 0.9882446)
+bones/11/rotation = Quaternion(0.114263654, 0.09736833, 0.21910231, 0.96408373)
+bones/12/rotation = Quaternion(-0.0048509385, -0.009339574, -0.21494098, 0.9765703)
+bones/13/rotation = Quaternion(0.0012128341, -0.012777803, 0.115282916, 0.99324983)
+bones/15/rotation = Quaternion(0.20073158, 0.02179225, 0.019717691, 0.9792054)
+bones/16/rotation = Quaternion(0.08971062, 2.2471647e-06, -0.011068103, 0.99590635)
+bones/17/rotation = Quaternion(0.13267012, 2.7857724e-05, -0.015239634, 0.99104315)
+bones/19/rotation = Quaternion(0.12826931, 0.016269645, 0.040497564, 0.9907787)
+bones/20/rotation = Quaternion(0.11655228, -2.0536827e-05, -0.01387127, 0.9930877)
+bones/21/rotation = Quaternion(0.21878286, -0.032692745, -0.04234697, 0.97430587)
+bones/23/rotation = Quaternion(0.18289635, 0.02070006, 0.030236118, 0.98244905)
+bones/24/rotation = Quaternion(0.09683959, -1.0619348e-05, -0.011699607, 0.9952313)
+bones/25/rotation = Quaternion(0.16292885, -0.09476015, -0.061582793, 0.980144)
+bones/27/rotation = Quaternion(0.1359668, 0.016423263, -0.0027734765, 0.99057335)
+bones/28/rotation = Quaternion(0.12909733, 0.0044356813, 0.019354714, 0.9914331)
+bones/29/rotation = Quaternion(0.19184978, 2.9080082e-05, -0.024940979, 0.98110735)
+bones/31/rotation = Quaternion(0.61332023, -0.3769871, 0.56708956, 0.40016055)
+bones/32/rotation = Quaternion(0.3883495, -0.089639224, 0.028644532, 0.9166947)
+bones/33/rotation = Quaternion(-0.0020108805, 0.062958494, -0.18331939, 0.9810332)
+bones/34/rotation = Quaternion(0.01905029, -0.16237384, -0.031425983, 0.9860448)
+bones/35/rotation = Quaternion(0.10524689, -0.084032044, -0.22384916, 0.96527374)
+bones/36/rotation = Quaternion(0.019266514, -0.0017149276, 0.077289775, 0.99682105)
+bones/37/rotation = Quaternion(-0.013289441, 0.09158116, 0.02206081, 0.99546456)
+bones/39/rotation = Quaternion(0.10340206, -0.007625222, -0.05328455, 0.99318206)
+bones/40/rotation = Quaternion(0.11216998, -2.1432903e-05, 0.0064902366, 0.99366784)
+bones/41/rotation = Quaternion(0.13568477, 0.0005129829, 0.013132367, 0.9906649)
+bones/43/rotation = Quaternion(0.04837966, -0.009818956, -0.0516039, 0.99744684)
+bones/44/rotation = Quaternion(0.123727575, -4.9665658e-05, 0.007688286, 0.9922865)
+bones/45/rotation = Quaternion(0.14778444, 0.00036455985, 0.013248097, 0.9889309)
+bones/47/rotation = Quaternion(0.101930685, -0.01091694, -0.053720754, 0.99328)
+bones/48/rotation = Quaternion(0.14206281, -3.9545354e-05, 0.008804504, 0.9898186)
+bones/49/rotation = Quaternion(0.21650657, 0.0005246186, 0.019611552, 0.97608405)
+bones/51/rotation = Quaternion(0.12303113, -0.013077445, -0.038178157, 0.9915819)
+bones/52/rotation = Quaternion(0.11754772, -0.00032692825, 0.010961804, 0.99300677)
+bones/53/rotation = Quaternion(0.090761684, -2.9292889e-05, 0.003498977, 0.9958665)
+bones/55/rotation = Quaternion(0.061433412, -0.019183684, 0.99656904, 0.052038852)
+bones/56/rotation = Quaternion(-0.18620285, -0.066838495, -0.040999033, 0.97937745)
+bones/57/rotation = Quaternion(0.6579133, -0.033777963, 0.0055987015, 0.7523149)
+bones/58/rotation = Quaternion(0.07778618, -0.0052455976, -0.07396977, 0.9942084)
+bones/60/rotation = Quaternion(-0.08417332, 0.108682916, 0.9794413, 0.14764076)
+bones/61/rotation = Quaternion(-0.365653, 0.059419695, 0.032590594, 0.9282807)
+bones/62/rotation = Quaternion(0.60003835, 0.110321164, 0.085825115, 0.7876658)
+bones/63/rotation = Quaternion(0.1674327, 0.018004002, 0.105386846, 0.9800693)
+
+[node name="Popup" parent="NPCs/Rowan" index="3"]
+transform = Transform3D(1.0000019, 0, -3.5762787e-07, 0, 1, 0, 3.5762787e-07, 0, 1.0000019, -1.1252565, 2, -0.23727226)
+
 [node name="OutdoorAmbience" type="FmodEventEmitter3D" parent="."]
 event_name = "event:/000_SFX/100_Environment/outdoor ambience"
 event_guid = "{5124a576-f271-4033-bde3-5a862acd37d3}"
@@ -1876,3 +1938,4 @@ transform = Transform3D(1.28783, 0, 0.000274488, 0, 0.828329, 0, -0.000426944, 0
 [editable path="NPCs/Frat boy red hat"]
 [editable path="NPCs/Frat boy long hair"]
 [editable path="NPCs/Frat boy long hair2"]
+[editable path="NPCs/Rowan"]
