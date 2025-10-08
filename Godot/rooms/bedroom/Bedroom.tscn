@@ -1086,8 +1086,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4g2yi")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_w60h2"]
-size = Vector3(13.34, 3.67, 4.705)
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkd24"]
+size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7orw5"]
 resource_name = "Material.009"
@@ -2779,7 +2779,7 @@ enabled = false
 metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
 [node name="Popup" parent="CorkBoard" instance=ExtResource("55_wkd24")]
-transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 1.1864907, 0, 0)
+transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 0.94049066, 0, 0.3075)
 visible = false
 
 [node name="Background" parent="CorkBoard/Popup" index="0"]
@@ -2829,9 +2829,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43036, 0, 0)
 collision_shape = NodePath("CollisionShape3D2")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="CorkBoard/InteractionDetector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37, 0.165, 0)
-shape = SubResource("BoxShape3D_w60h2")
-debug_color = Color(0.43529412, 0, 0.015686275, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.43, -0.23500001, 1.5)
+shape = SubResource("BoxShape3D_wkd24")
+debug_color = Color(0, 1, 0.0333333, 1)
 
 [node name="StarRug" parent="." groups=["material_carpet"] instance=ExtResource("20_y7msa")]
 transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 0.137042, -0.120105, 1.50737)
