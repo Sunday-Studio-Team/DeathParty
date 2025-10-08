@@ -2356,7 +2356,7 @@ on_phone_close_dialogue = ExtResource("5_shd6j")
 on_journal_dialogue = ExtResource("6_yxfps")
 exterior_scene_loader = NodePath("../SceneLoader_Exterior")
 polaroid_camera = NodePath("../PolaroidCamera")
-corkboard_popup = NodePath("../CorkBoard/corkboardPopup")
+corkboard_popup = NodePath("../CorkBoard/Popup")
 
 [node name="IntroCameraPath" type="Path3D" parent="."]
 curve = SubResource("Curve3D_tluma")
@@ -2775,21 +2775,22 @@ transform = Transform3D(0.998259, 0, -0.102315, 0, 1.00349, 0, 0.102315, 0, 0.99
 transform = Transform3D(1.12343, 0, 0, 0, 1.12343, 0, 0, 0, 1.12343, -0.926211, 1.4748, -1.18352)
 script = ExtResource("54_8ahpd")
 title = NodePath("../TitleScreen")
+enabled = false
 metadata/_custom_type_script = "uid://bea7y4hurcesx"
 
-[node name="corkboardPopup" parent="CorkBoard" instance=ExtResource("55_wkd24")]
+[node name="Popup" parent="CorkBoard" instance=ExtResource("55_wkd24")]
 transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.615, 1.1864907, 0, 0)
 visible = false
 
-[node name="Background" parent="CorkBoard/corkboardPopup" index="0"]
+[node name="Background" parent="CorkBoard/Popup" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.407059, 0)
 texture = ExtResource("57_f0vbm")
 
-[node name="NameLabel" parent="CorkBoard/corkboardPopup" index="1"]
+[node name="NameLabel" parent="CorkBoard/Popup" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08159971, 0.4823072, 0)
 text = "TAKE!"
 
-[node name="TakeLabel" parent="CorkBoard/corkboardPopup" index="2"]
+[node name="TakeLabel" parent="CorkBoard/Popup" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29784387, 0.4006183, 0)
 pixel_size = 0.0016
 text = "Photo"
@@ -2825,7 +2826,6 @@ transform = Transform3D(0.900741, 0, 0, 0, 0.900741, 0, 0, 0, 0.900741, -0.03222
 
 [node name="InteractionDetector" parent="CorkBoard" node_paths=PackedStringArray("collision_shape") instance=ExtResource("63_yquho")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43036, 0, 0)
-monitoring = false
 collision_shape = NodePath("CollisionShape3D2")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="CorkBoard/InteractionDetector"]
@@ -3193,12 +3193,11 @@ visible = false
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
 [connection signal="intro_finished" from="." to="TutorialUI" method="_on_bedroom_intro_finished"]
 [connection signal="toggle_corkboard_interactable" from="TutorialUI" to="CorkBoard" method="_on_tutorial_ui_toggle_corkboard_interactable"]
-[connection signal="player_interacted" from="CorkBoard/InteractionDetector" to="CorkBoard" method="_on_interaction_detector_player_interacted"]
 
 [editable path="SceneLoader_Exterior"]
 [editable path="SceneLoader_Exterior/InteractionDetector"]
 [editable path="Bed"]
 [editable path="Closet"]
 [editable path="Desk/DeskObjects"]
-[editable path="CorkBoard/corkboardPopup"]
+[editable path="CorkBoard/Popup"]
 [editable path="LEO"]

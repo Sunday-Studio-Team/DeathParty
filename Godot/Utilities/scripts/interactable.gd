@@ -53,7 +53,7 @@ func _ready() -> void:
 	if popup:
 		popup.visible = false
 
-		
+
 func create_outline() -> void:
 	#print("Creating outline")
 	if primary_mesh == null: return
@@ -62,7 +62,8 @@ func create_outline() -> void:
 	new_shader.set_shader_parameter("alpha", 0)
 	new_shader.set_shader_parameter("thickness", outline_thickness)
 	surface_material.next_pass = new_shader
-	
+
+
 func toggle_popup(on: bool) -> void:
 	if popup:
 		popup.visible = on
@@ -82,6 +83,8 @@ func toggle_popup(on: bool) -> void:
 
 
 ##OVERRIDE THESE METHODS (but call super() at the beginning)
+# NOTE: you might need to also add the enabled check at the beginning
+#		of your overriding method 
 func on_interact() -> void:
 	if !enabled :return
 	toggle_popup(false)
