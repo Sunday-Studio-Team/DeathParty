@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl75a8q3i0w22"]
+[gd_scene load_steps=7 format=3 uid="uid://dl75a8q3i0w22"]
 
 [ext_resource type="PackedScene" uid="uid://c6gtf2ddtose" path="res://Assets/environment/bookshelves/bookshelf/bookshelf.glb" id="1_tp3kn"]
 [ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="2_sv78s"]
 [ext_resource type="Resource" uid="uid://beiwfusn6h5p6" path="res://Singletons/SaveSystem/DefaultResources/TalkingObjectResources/bookshelf_library_properties.tres" id="3_c3cmv"]
 [ext_resource type="PackedScene" uid="uid://3dt1w7lckdyq" path="res://Entities/interaction_detector.tscn" id="4_c3cmv"]
+[ext_resource type="PackedScene" uid="uid://cqxjk5afxrhem" path="res://Common/Popup UI/object_interact_popup.tscn" id="5_6q2du"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6q2du"]
 resource_local_to_scene = true
@@ -18,5 +19,8 @@ talking_object_resource = ExtResource("3_c3cmv")
 [node name="CollisionShape3D" parent="InteractionDetector" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28051877, 0.20000333, 0.38871732)
 shape = SubResource("BoxShape3D_6q2du")
+
+[node name="Popup" parent="." index="2" instance=ExtResource("5_6q2du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 
 [editable path="InteractionDetector"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://tt4l0v1cauji"]
+[gd_scene load_steps=8 format=4 uid="uid://tt4l0v1cauji"]
 
 [ext_resource type="Texture2D" uid="uid://cxkjhxfr5fd86" path="res://rooms/Kitchen/beerpong trophie_red cup.png" id="1_4jjdp"]
+[ext_resource type="PackedScene" uid="uid://cqxjk5afxrhem" path="res://Common/Popup UI/object_interact_popup.tscn" id="2_dmt7n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjs6u"]
 resource_name = "Material"
@@ -85,3 +86,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8, 0)
 shape = SubResource("BoxShape3D_dmt7n")
+
+[node name="Popup" parent="." instance=ExtResource("2_dmt7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3250525, -0.20160234, 0)

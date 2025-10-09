@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://c7k3r4wskxfl5"]
+[gd_scene load_steps=50 format=4 uid="uid://c7k3r4wskxfl5"]
 
 [ext_resource type="Texture2D" uid="uid://ces02gfhqk6pr" path="res://Assets/props/wooden_table/wood_table_woodlight1.png" id="1_2p1p5"]
 [ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="1_lwrhe"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bont0a7c7jekf" path="res://Assets/props/jack_o_lanterns/pumpkin_with_beers.tscn" id="12_iwk4c"]
 [ext_resource type="Texture2D" uid="uid://bxkhw3ocktaig" path="res://rooms/Basement/snacks on table_Image_0_11.png" id="13_24nv4"]
 [ext_resource type="PackedScene" uid="uid://3dt1w7lckdyq" path="res://Entities/interaction_detector.tscn" id="16_5gth4"]
+[ext_resource type="PackedScene" uid="uid://cqxjk5afxrhem" path="res://Common/Popup UI/object_interact_popup.tscn" id="17_q02m8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh7tw"]
 resource_name = "Material.001"
@@ -547,5 +548,8 @@ shape = SubResource("BoxShape3D_dttvy")
 [node name="CollisionShape3D" parent="InteractionDetector" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0325311, 0.901062, 0.048683)
 shape = SubResource("BoxShape3D_q02m8")
+
+[node name="Popup" parent="." instance=ExtResource("17_q02m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.044417065, 1.3306601, 0.82199734)
 
 [editable path="InteractionDetector"]
