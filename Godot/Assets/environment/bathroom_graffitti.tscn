@@ -21,5 +21,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.456835, 1.16837, 1.80199)
 shape = SubResource("BoxShape3D_0iwcm")
 
 [node name="Popup" parent="." index="16" instance=ExtResource("5_0iwcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6006272, 0)
 
 [editable path="InteractionDetector"]

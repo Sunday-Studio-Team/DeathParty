@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://drj74iejy03cg"]
+[gd_scene load_steps=12 format=4 uid="uid://drj74iejy03cg"]
 
 [ext_resource type="Texture2D" uid="uid://cphr3akbxc7wm" path="res://rooms/Basement/basement layout_Entryway wood.png" id="1_jjo88"]
 [ext_resource type="Texture2D" uid="uid://jiacg077gvxe" path="res://rooms/Basement/basement layout_woodlight1.png" id="2_mxqws"]
 [ext_resource type="Texture2D" uid="uid://4iykxcokw2c6" path="res://rooms/Basement/basement layout_stainless steel.png" id="3_vt3bu"]
 [ext_resource type="Script" uid="uid://bea7y4hurcesx" path="res://Utilities/scripts/interactable.gd" id="4_vt3bu"]
 [ext_resource type="Resource" uid="uid://b7n74w3le2ycv" path="res://Singletons/SaveSystem/DefaultResources/TalkingObjectResources/basement_door_properties.tres" id="5_3apjh"]
+[ext_resource type="PackedScene" uid="uid://cqxjk5afxrhem" path="res://Common/Popup UI/object_interact_popup.tscn" id="6_3apjh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2iql"]
 resource_name = "Material.071"
@@ -109,3 +110,6 @@ mesh = SubResource("ArrayMesh_3286x")
 skeleton = NodePath("")
 script = ExtResource("4_vt3bu")
 talking_object_resource = ExtResource("5_3apjh")
+
+[node name="Popup" parent="." instance=ExtResource("6_3apjh")]
+transform = Transform3D(3.9999995, 0, -4.656613e-10, 0, 3.9999995, 0, 4.656613e-10, 0, 3.9999995, -0.26828334, 2.3777475, -2.6408575)

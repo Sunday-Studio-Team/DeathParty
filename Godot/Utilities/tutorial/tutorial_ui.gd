@@ -71,14 +71,13 @@ var state: States:
 			States.TAKE_PICTURE:
 				print("TUTORIAL STEP: TAKE PICTURE")
 				polaroid_camera.queue_free()
-				corkboard_popup.show()
 				toggle_corkboard_interactable.emit(true)
 			States.TUTORIAL_FINISHED:
 				print("TUTORIAL STEP: FINISHED")
 				toggle_corkboard_interactable.emit(false)
 				exterior_scene_loader.enabled = true
 				queue_free()
-	
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

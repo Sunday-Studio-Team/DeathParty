@@ -47,7 +47,7 @@ size_flags_horizontal = 8
 
 [node name="PressQToUnlockPhoneLabel" type="Label" parent="PhoneControlsPopup"]
 layout_mode = 2
-text = "Press Q to unlock your phone"
+text = "Press Q to unlock/lock your phone"
 
 [node name="JournalControlsPopup" type="PanelContainer" parent="."]
 unique_name_in_owner = true
@@ -63,6 +63,6 @@ grow_vertical = 2
 
 [node name="PressTabToOpenJournalLabel" type="Label" parent="JournalControlsPopup"]
 layout_mode = 2
-text = "Press TAB to open your journal"
+text = "Press TAB to open/close your journal"
 
 [connection signal="timeout" from="WalkCompleteTimer" to="." method="_on_walk_complete_timer_timeout"]
