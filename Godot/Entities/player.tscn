@@ -24,6 +24,7 @@ animation = &"the walking"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ov2v6"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_gb1tc"]
+nodes/output/position = Vector2(1060, 60)
 "nodes/Idle Anim/node" = SubResource("AnimationNodeAnimation_pvmex")
 "nodes/Idle Anim/position" = Vector2(160, 100)
 "nodes/Jog Anim/node" = SubResource("AnimationNodeAnimation_xd3k7")
@@ -36,8 +37,7 @@ nodes/TimeScale/position = Vector2(860, 40)
 "nodes/Walk Anim/position" = Vector2(160, 280)
 "nodes/Walk Blend/node" = SubResource("AnimationNodeBlend2_ov2v6")
 "nodes/Walk Blend/position" = Vector2(420, 140)
-nodes/output/position = Vector2(1060, 60)
-node_connections = [&"Jog Blend", 0, &"Walk Blend", &"Jog Blend", 1, &"Jog Anim", &"TimeScale", 0, &"Jog Blend", &"Walk Blend", 0, &"Idle Anim", &"Walk Blend", 1, &"Walk Anim", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"Jog Blend", 0, &"Walk Blend", &"Jog Blend", 1, &"Jog Anim", &"TimeScale", 0, &"Jog Blend", &"Walk Blend", 0, &"Idle Anim", &"Walk Blend", 1, &"Walk Anim"]
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("player_camera_location")]
 collision_layer = 2
@@ -179,8 +179,13 @@ unique_name_in_owner = true
 root_node = NodePath("%PlayerModel/Final Olivia")
 tree_root = SubResource("AnimationNodeBlendTree_gb1tc")
 anim_player = NodePath("../PlayerModel/Final Olivia/AnimationPlayer")
-"parameters/Jog Blend/blend_amount" = 0
+"parameters/Jog Blend/blend_amount" = 0.0
 parameters/TimeScale/scale = 1.0
 "parameters/Walk Blend/blend_amount" = 0.0
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2931936, 0)
+radius = 0.85
+use_3d_avoidance = true
 
 [editable path="PlayerModel/Final Olivia"]

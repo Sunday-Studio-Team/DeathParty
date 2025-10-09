@@ -8,7 +8,7 @@ var outline: Node3D
 
 
 func _ready() -> void:
-	super ()
+	super()
 	if character_resource:
 		#Get the current character resource from the save file
 		character_resource = SaveSystem.get_character(character_resource.name)
