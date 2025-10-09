@@ -9,16 +9,10 @@
 
 [resource]
 script = ExtResource("1_toiu1")
-character_location = 0
 image_polaroid = ExtResource("1_h6cx1")
 image_polaroid_popout = ExtResource("2_usyd4")
 image_profile = ExtResource("2_nyvch")
-profile_tag = "@profiletag123"
-profile_quote = "inspirational quote goes here."
-profile_join_date = "Month 8, 20XX"
-profile_friends = 359
 default_chats = Dictionary[int, JSON]({
 10: ExtResource("1_sbmtt")
 })
-queue_chats = Dictionary[int, ExtResource("4_nvgbf")]({})
 name = "Rowan"

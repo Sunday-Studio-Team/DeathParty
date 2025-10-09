@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://d1yny6oqf2gvp" path="res://Singletons/SaveSystem/ResourceScripts/json_array.gd" id="3_npws7"]
 [ext_resource type="JSON" path="res://Assets/InkFiles/OliviaCalebPartyRoom.json" id="4_eyuf2"]
 
-[sub_resource type="Resource" id="Resource_x6qpo"]
+[sub_resource type="Resource" id="Resource_eyuf2"]
 script = ExtResource("3_npws7")
 json_array = Array[JSON]([ExtResource("4_eyuf2"), null])
 metadata/_custom_type_script = "uid://d1yny6oqf2gvp"
@@ -15,7 +15,12 @@ metadata/_custom_type_script = "uid://d1yny6oqf2gvp"
 script = ExtResource("1_5gmr0")
 image_polaroid = ExtResource("1_ecyof")
 image_polaroid_popout = ExtResource("2_0c5ri")
+image_profile = ExtResource("1_ecyof")
+profile_tag = null
+profile_quote = null
+profile_join_date = null
+profile_friends = null
 queue_chats = Dictionary[int, ExtResource("3_npws7")]({
-3: SubResource("Resource_x6qpo")
+0: SubResource("Resource_eyuf2")
 })
 name = "Caleb"
