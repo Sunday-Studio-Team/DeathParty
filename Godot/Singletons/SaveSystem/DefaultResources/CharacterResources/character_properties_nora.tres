@@ -1,22 +1,24 @@
-[gd_resource type="Resource" script_class="CharacterResource" load_steps=5 format=3 uid="uid://lfthc37kslft"]
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=8 format=3 uid="uid://lfthc37kslft"]
 
 [ext_resource type="Texture2D" uid="uid://dt2q87mwcwbmb" path="res://Assets/CharacterAssets/Polaroids/nora_a.png" id="1_cbegv"]
 [ext_resource type="Texture2D" uid="uid://dka00jbmkrihq" path="res://Assets/CharacterAssets/nora/nora_circle.png" id="2_cbegv"]
 [ext_resource type="Texture2D" uid="uid://gxeghch3pqsi" path="res://Assets/CharacterAssets/Polaroids/nora_b.png" id="2_cdqmh"]
-[ext_resource type="Script" uid="uid://cmr58186dx31r" path="res://Assets/Resources/CharacterResources/Default Resource (DO NOT EDIT)/character_properties_script.gd" id="2_to8io"]
+[ext_resource type="Script" uid="uid://cmr58186dx31r" path="res://Singletons/SaveSystem/ResourceScripts/character_properties_script.gd" id="2_to8io"]
+[ext_resource type="Script" uid="uid://d1yny6oqf2gvp" path="res://Singletons/SaveSystem/ResourceScripts/json_array.gd" id="4_pxfea"]
+[ext_resource type="JSON" path="res://Assets/InkFiles/OliviaNoraSamPartyRoomDancerPartner.ink.json" id="5_dpa4y"]
+
+[sub_resource type="Resource" id="Resource_dpa4y"]
+script = ExtResource("4_pxfea")
+json_array = Array[JSON]([ExtResource("5_dpa4y"), null])
+metadata/_custom_type_script = "uid://d1yny6oqf2gvp"
 
 [resource]
 script = ExtResource("2_to8io")
-name = "Nora"
-character_location = "Library"
 image_polaroid = ExtResource("1_cbegv")
 image_polaroid_popout = ExtResource("2_cdqmh")
-name_color = ""
-text_color = ""
-character_notes = Array[String]([])
-character_description = ""
 image_profile = ExtResource("2_cbegv")
 profile_tag = "@nora2948"
-profile_quote = "inspirational quote goes here."
-profile_join_date = "Month 8, 20XX"
-profile_friends = 359
+queue_chats = Dictionary[int, ExtResource("4_pxfea")]({
+0: SubResource("Resource_dpa4y")
+})
+name = "Nora"
